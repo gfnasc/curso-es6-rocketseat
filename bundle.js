@@ -20,7 +20,8 @@
 //     MinhaLista.add('Novo todo');
 //     console.log(TodoList.soma(1, 1));
 // }
-var arr = [1, 2, 3, 4, 5, 7, 9]; // const newArr = arr.map(function(item) {
+var arr = [1, 2, 3, 4, 5, 7, 9]; //Uso de arrow functions
+// const newArr = arr.map(function(item) {
 //     return item * 2;
 // });
 // const newArr = arr.map((item) => {
@@ -29,21 +30,41 @@ var arr = [1, 2, 3, 4, 5, 7, 9]; // const newArr = arr.map(function(item) {
 // const newArr = arr.map(item => {
 //     return item * 2;
 // });
-//Uso de arrow functions
 
 var newArr = arr.map(function (item) {
   return item * 2;
-});
-console.log(newArr);
+}); // console.log(newArr);
+
 var sum = arr.reduce(function (total, next) {
   return total + next;
-});
-console.log(sum);
+}); // console.log(sum);
+
 var filter = arr.filter(function (item) {
   return item % 2 === 0;
-});
-console.log(filter);
+}); // console.log(filter);
+
 var find = arr.find(function (item) {
   return item === 4;
-});
-console.log(find);
+}); // console.log(find);
+//desestruturação
+
+var usuario = {
+  nome: 'Guilherme',
+  idade: 25,
+  endereco: {
+    cidade: 'Presidente Prudente',
+    estado: 'SP'
+  }
+};
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade;
+console.log(nome, idade, cidade);
+
+function desestruturacao(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log(nome, idade);
+}
+
+desestruturacao(usuario);
