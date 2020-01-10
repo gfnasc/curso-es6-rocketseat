@@ -20,8 +20,18 @@
 //     MinhaLista.add('Novo todo');
 //     console.log(TodoList.soma(1, 1));
 // }
-var arr = [1, 2, 3, 4, 5, 7, 9];
-var newArr = arr.map(function (item, index) {
+var arr = [1, 2, 3, 4, 5, 7, 9]; // const newArr = arr.map(function(item) {
+//     return item * 2;
+// });
+// const newArr = arr.map((item) => {
+//     return item * 2;
+// });
+// const newArr = arr.map(item => {
+//     return item * 2;
+// });
+//Uso de arrow functions
+
+var newArr = arr.map(function (item) {
   return item * 2;
 });
 console.log(newArr);
